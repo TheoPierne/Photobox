@@ -13,8 +13,8 @@ const $gallery_container = document.getElementById('gallery_container');
  */
 export function display_gallerie(gallery = []){
 	gallery.forEach(e => {
-		const { thumbnail: { href: uri } } = e.photo;
-		const { self: { href: src } } = e.links;
+		const { thumbnail: { href: src } } = e.photo;
+		const { self: { href: uri } } = e.links;
 		const $vignette = makeVignette({ uri, src });
 		$gallery_container.appendChild($vignette);
 	});
