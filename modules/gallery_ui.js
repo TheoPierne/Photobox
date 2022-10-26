@@ -1,4 +1,5 @@
 import { BASE_ENDPOINT } from './constants.js';
+import { display_lightbox } from './lightbox_ui.js';
 
 /**
  * Variable représentant le container de la galerie.
@@ -40,6 +41,10 @@ function makeVignette({ uri, src } = {}){
 	$img.src = `${BASE_ENDPOINT}${src}`;
 
 	$divVignette.appendChild($img);
+
+	$img.addEventListener('click', e => {
+		display_lightbox(uri);
+	});
 
 	return $divVignette;
 }
