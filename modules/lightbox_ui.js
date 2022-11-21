@@ -12,7 +12,6 @@ $lightbox_close.onclick = () => {
 
 export function display_lightbox(uri) {
 	const data = lesPhotos.find(e => e.links.self.href === uri);
-	console.log(lesPhotos, data);
 	if (data) {
 		$lightbox_full_img.src = `${BASE_ENDPOINT}${data.photo.original.href}`;
 		$lightbox_title.innerText = data.photo.titre;

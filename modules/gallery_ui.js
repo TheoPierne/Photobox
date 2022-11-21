@@ -42,7 +42,7 @@ function makeVignette({ uri, src } = {}) {
 
 	$divVignette.appendChild($img);
 
-	$img.addEventListener('click', e => {
+	$img.addEventListener('click', () => {
 		display_lightbox(uri);
 	});
 
