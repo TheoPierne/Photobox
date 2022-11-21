@@ -10,8 +10,8 @@ $lightbox_close.onclick = () => {
 	hide();
 }
 
-export function display_lightbox(uri){
-	const data = lesPhotos.find(e => e.links.self.uri === uri);
+export function display_lightbox(uri) {
+	const data = lesPhotos.find(e => e.links.self.href === uri);
 	if (data) {
 		$lightbox_full_img.src = `${BASE_ENDPOINT}${data.photo.original.href}`;
 		$lightbox_title.innerText = data.photo.titre;
@@ -19,10 +19,10 @@ export function display_lightbox(uri){
 	}
 }
 
-export function show(){
+export function show() {
 	$lightbox_container.classList.remove('lightbox_container--hidden');
 }
 
-export function hide(){
+export function hide() {
 	$lightbox_container.classList.add('lightbox_container--hidden');
 }
