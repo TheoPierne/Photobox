@@ -23,30 +23,37 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 /* end reset */
 
 
@@ -54,7 +61,8 @@ table {
     photobox : nav
  */
 div, nav, section, p, h1, h2 {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 nav {
   padding: 2em;
@@ -76,18 +84,19 @@ nav #next {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em,1fr));
     grid-gap: .2em;
-
 }
 
 .vignette img {
     max-width: 100%;
-    height: auto; }
+    height: auto;
+}
 
 
 /**
   photobox : Lightbox
  */
 .lightbox_container {
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -124,6 +133,20 @@ nav #next {
 #lightbox-head {
     height: 8%;
     width: 100%;
+    padding: 0 1em;
     background-color: rgba(0, 0, 0, 0.6);
     color: floralwhite;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lightbox_close {
+
+}
+
+#lightbox_title {
+    text-align: center;
+    flex-grow: 1;
 }
