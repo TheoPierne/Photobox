@@ -16,8 +16,8 @@ import { loadResource } from "./api.js";
 
 /**
  * La fonction retourne un objet photo à partir de l'URI passé dans un dataset dans le noeux en paramètre.
- * @param {Node} node - Noeux de l'arborescence DOM.
- * @returns {Promise<Photo>} - Object de type Photo retourné par l'API.
+ * @param {Node} node Noeux de l'arborescence DOM.
+ * @returns {Promise<Photo>} Object de type Photo retourné par l'API.
  */
 export function load(node) {
     return loadResource(node.dataset.uri);
