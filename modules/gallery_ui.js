@@ -13,12 +13,14 @@ const $gallery_container = document.getElementById('gallery_container');
  * @param {Array} gallery Les données de l'API représentées sous forme d'un tableau d'object. 
  */
 export function display_gallerie(gallery = []) {
+	const $el = [];
 	gallery.forEach(e => {
 		const { thumbnail: { href: src } } = e.photo;
 		const { self: { href: uri } } = e.links;
 		const $vignette = makeVignette({ uri, src });
-		$gallery_container.appendChild($vignette);
+		$el.push($vignette);
 	});
+	$gallery_container.replaceChildren(...$el);
 }
 
 /**
