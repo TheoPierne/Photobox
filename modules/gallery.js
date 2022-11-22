@@ -24,5 +24,5 @@ export function next() {
 }
 
 export function prev() {
-    page = (page - 1 === 0) ? 1 : page + 1;
+    page = (page - 1 === 0) ? 1 : page - 1;
 }
