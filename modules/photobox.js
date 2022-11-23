@@ -1,14 +1,13 @@
 import { display_gallerie } from './gallery_ui.js';
 import { load, prev, next } from './gallery.js';
 
-const $load_gallery = document.getElementById('load_gallery');
 const $next = document.getElementById('next');
 const $previous = document.getElementById('previous');
 
-$load_gallery.onclick = async e => {
+window.addEventListener('DOMContentLoaded', async () => {
   const data = await load();
   display_gallerie(data);
-};
+});
 
 $next.onclick = async e => {
   next();
