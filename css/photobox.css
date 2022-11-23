@@ -5,19 +5,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,8 +95,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -36,16 +113,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -54,13 +135,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* end reset */
 
 
 /*
     photobox : nav
  */
-div, nav, section, p, h1, h2 {
+div,
+nav,
+section,
+p,
+h1,
+h2 {
   box-sizing: border-box;
 }
 
@@ -68,6 +155,7 @@ nav {
   padding: 2em;
   font-size: 1.2em;
 }
+
 nav * {
   font-size: 1.2em;
 }
@@ -80,15 +168,15 @@ nav #next {
   photobox : Galerie
  */
 .gallery-container {
-    padding: 3em;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em,1fr));
-    grid-gap: .2em;
+  padding: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-gap: .2em;
 }
 
 .vignette img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -96,61 +184,101 @@ nav #next {
   photobox : Lightbox
  */
 .lightbox_container {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
+
 .lightbox_container--hidden {
-    display : none;
+  display: none;
 }
+
 .lightbox_container--visible {
-    display : block;
+  display: block;
 }
 
 #lightbox {
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
+
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 200vh;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 #lightbox-img {
-    position:relative;
+  position: relative;
 }
 
 #lightbox-img img {
-    display: block;
-    margin: auto;
-    width: auto;
-    height: auto;
-    max-height: 100%;
-    max-width: 100%;
-
+  display: block;
+  margin: auto;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
+
 #lightbox-head {
-    height: 8%;
-    width: 100%;
-    padding: 0 1em;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: floralwhite;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
+  height: 6%;
+  width: 100%;
+  padding: 0 1em;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: floralwhite;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #lightbox_close:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #lightbox_title {
-    text-align: center;
-    flex-grow: 1;
+  text-align: center;
+  flex-grow: 1;
+}
+
+#les-commentaires {
+  background-color: white;
+  padding: 6px 2.5rem;
+  height: 100vh;
+  width: 100wv;
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+#commentaires .commentaire {
+  border: 1px solid black;
+  background-color: lightgrey;
+  padding: 6px;
+  margin-bottom: .5rem;
+}
+
+#commentaires {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-com {
+  flex-basis: 69%;
+}
+
+.commentaire>p {
+  font-style: italic;
+}
+
+.commentaire>h4 {
+  font-weight: bold;
+}
+
+#formulaire-commentaire {
+  flex-basis: 29%;
 }

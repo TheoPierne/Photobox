@@ -8,7 +8,7 @@ let page = 1;
 
 export async function load() {
     const uri = `/www/canals5/phox/api/photos/?page=${page}`;
-    let data; 
+    let data;
     if (page in pages) {
         data = pages[page];
     } else {
