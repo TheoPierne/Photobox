@@ -1,8 +1,10 @@
 import { display_gallerie } from './gallery_ui.js';
+import { ajouterCommentaire } from './lightbox_ui.js';
 import { load, prev, next, last, first } from './gallery.js';
 
 const $next = document.getElementById('next');
 const $previous = document.getElementById('previous');
+const $btnSubmit = document.getElementById('btn-submit');
 const $first = document.getElementById('first');
 const $last = document.getElementById('last');
 
@@ -33,4 +35,8 @@ $last.onclick = async e => {
   last();
   const data = await load();
   display_gallerie(data);
+}
+
+$btnSubmit.onclick = () => {
+  ajouterCommentaire();
 }

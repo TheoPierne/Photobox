@@ -42,7 +42,7 @@ export async function loadPicture(idPicture) {
 	try {
 		req = await fetch(`${API_ENDPOINT}/photos/${idPicture}`, REQ_OPTIONS);
 		return req.json();
-	} catch(e) {
+	} catch (e) {
 		return e;
 	}
 }
@@ -76,7 +76,7 @@ export async function loadResource(uri) {
 	try {
 		req = await fetch(`${BASE_ENDPOINT}${uri}`);
 		return req.json();
-	} catch(e) {
+	} catch (e) {
 		return e;
 	}
 }
